@@ -1,4 +1,4 @@
-<?php
+<?php namespace Adaptive\Diff;
 /**
  * Diff
  *
@@ -42,6 +42,9 @@
  * @version 1.1
  * @link http://github.com/chrisboulton/php-diff
  */
+
+use Adaptive\Diff\Renderer\AbstractRenderer;
+use Adaptive\Diff\SequenceMatcher;
 
 class Diff
 {
@@ -96,7 +99,7 @@ class Diff
 	 * @param Diff_Renderer_Abstract $renderer An instance of the rendering object to use for generating the diff.
 	 * @return mixed The generated diff. Exact return value depends on the rendered.
 	 */
-	public function render(Diff_Renderer_Abstract $renderer)
+	public function render(AbstractRenderer $renderer)
 	{
 		$renderer->diff = $this;
 		return $renderer->render();
@@ -169,8 +172,7 @@ class Diff
 			return $this->groupedCodes;
 		}
 
-		require_once dirname(__FILE__).'/Diff/SequenceMatcher.php';
-		$sequenceMatcher = new Diff_SequenceMatcher($this->a, $this->b, null, $this->options);
+		$sequenceMatcher = new SequenceMatcher($this->a, $this->b, null, $this->options);
 		$this->groupedCodes = $sequenceMatcher->getGroupedOpcodes();
 		return $this->groupedCodes;
 	}
