@@ -1,5 +1,5 @@
 {
-    "name": "adaptive/php-diff",
+    "name": "adaptive/php-text-difference",
     "description": "A comprehensive library for generating differences between two hashable objects (strings or arrays). Fork of a fork to add namespaces and psr-4 autoloading",
     "keywords": [
         "difference",

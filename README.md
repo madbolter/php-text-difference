@@ -1,7 +1,4 @@
-# PHP Diff Class
-
-## Notice
-This fork only exists because we wanted to have namespaces and have autoloading for this package.
+# PHP Text Difference Class
 
 ## Introduction
 
@@ -24,7 +21,7 @@ Via Composer
 ``` json
 {
     "require": {
-        "adaptive/php-diff": "1.0.*"
+        "adaptive/php-text-difference": "1.0.*"
     }
 }
 ```
