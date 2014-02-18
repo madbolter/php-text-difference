@@ -21,7 +21,7 @@ Via Composer
 ``` json
 {
     "require": {
-        "adaptive/php-text-difference": "1.0.*"
+        "adaptive/php-text-difference": "dev-master"
     }
 }
 ```
