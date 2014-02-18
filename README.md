@@ -24,7 +24,7 @@ Via Composer
 ``` json
 {
     "require": {
-        "adaptive/php-diff": "0.7.*"
+        "adaptive/php-diff": "1.0.*"
     }
 }
 ```
